@@ -1,0 +1,19 @@
+/* --------------- Icono Carrito ---------------- */
+.cart-btn {
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.nav-icon {
+    color: #ffffff;
+}
+.cart-items {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #f09d51;
+    padding: 0 5px;
+    border-radius: 30%;
+    color: #ffffff;
+}
+/* --------------- Fin Icono Carrito ---------------- */

@@ -1,0 +1,119 @@
+.detail {
+    display: flex;
+    flex-direction: row;
+    width: 1345px;
+    height: 575px;
+    background-color: #eee;
+    padding: 10px;
+}
+.detail__image {
+    color: #fff;
+    margin: 10px;
+    width: 250px;
+    height: 350px;
+    text-align: center;
+}
+.detail__image img {
+    width: 100%;
+    border: 1px solid #c4c2c2;
+    border-radius: 10px;
+}
+
+.detail__info {
+    color: #fff;
+    margin: 10px 20px 0;
+    width: 1050px;
+    height: 350px;
+    /* background: #E67E22; */
+    text-align: center;
+}
+.detail__info-title {
+    background: #000;
+    padding: 10px;
+}
+.detail__info-title p{
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.detail__info-delivery {
+    background: #eee;
+    text-align: center;
+    color: #ff5400;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 0;
+}
+.detail__info-description {
+    background: #fff;
+    color: #000;
+    text-align: justify;
+    padding: 20px;
+    font-size: 14px;
+}
+.detail__info-description p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.detail__info__buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 20px;
+    margin-top: 15px;
+}
+.detail__info__buy-price {
+    display: flex;
+	flex-direction: column;
+}
+.detail__info__buy-price > p {
+    text-align: center;
+    color: #778;
+    margin: 0;
+}
+.detail__info__buy-price-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.detail__info__buy-price-actions > p {
+    margin: 0;
+    font-weight: bold;
+}
+.detail__info__buy-price-actions > p:first-of-type {
+    font-size: 25px;
+}
+.detail__info__buy-price-actions > p:last-of-type {
+    margin-left: 5px;
+    font-size: 40px;
+    color: #ff5400;
+}
+.detail__info__buy-btn {
+    position: relative;
+    width: 200px;
+    cursor: pointer;
+    background-color: #ff5400 !important;
+    color: #fff !important;
+    font-size: 18px;
+    padding: 19px 0;
+    left: -20px;
+    transition: 0.2s;
+}
+.detail__info__buy-btn:hover {
+    left: -10px;
+}
+.detail__info__buy-btn:after {
+    position: absolute;
+    Top: 10px;
+    right: -15px;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px 4px 10px 0;
+    -ms-transform: rotate(45deg) skew(15deg, 15deg);
+    transform: rotate(45deg) skew(15deg, 15deg);
+    background-color: #ff5400;
+    content: "";
+}

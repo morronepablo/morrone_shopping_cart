@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { NavBar } from "./components/navBar/navBar";
+import { ItemListContainer } from "./pages/itemListContainer/itemListContainer";
+import { ItemDetailContainer } from "./pages/itemDetailContainer/itemDetailContainer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export const App = () => {
+    return (
+      <Router>
+        <main>
+          <NavBar />
+          <Switch>
+            <Route exact path="/">
+              <ItemListContainer />
+            </Route>
+            <Route exact path="/category/:id">
+              <ItemListContainer />
+            </Route>
+            <Route exact path="/item/:id">
+              <ItemDetailContainer />
+            </Route>
+          </Switch>
+        </main>
+      </Router>
+    )
 }
 
-export default App;
+// function App() {
+//   return (
+//     <main>
+//       <NavBar />
+//       <ItemListContainer />
+//       <ItemCount 
+//         product='Remera verano'
+//         stock={0} 
+//         initial={1}
+//         onAdd={() => console.log('onAdd')} 
+//       />
+//     </main>
+//   )
+// }

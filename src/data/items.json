@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Campera de Cuero",
+        "description": "Campera de cuero vacuno legítimo. Este es uno de los más utilizados en la industria del cuero, ya que se caracteriza por su durabilidad y su buena calidad. Tiene muy buena firmeza y cuenta con elasticidad, sin mencionar lo suave que es al tacto.",
+        "price" : 10900,
+        "pictureUrl": "https://static.dafiti.com.ar/p/kout-0324-972692-1-zoom.jpg",
+        "rating": 5,
+        "discount": 5,
+        "categoryId": "camperas"
+    },
+    {
+        "id": 2,
+        "title": "Pantalon Jeans",
+        "description": "Producto de Producción Nacional. Talles 38 al 50. Ante cualquier duda, nos podés escribir con tus medidas para poder asesorarte mejor sobre el talle que necesitás y contarnos cómo te gusta usar la prenda: si más holgada, o más ajustada al cuerpo.",
+        "price" : 1700,
+        "pictureUrl": "https://usamedia.frenchconnection.com/ms/fcus/74qay-womens-fr-summervintage-palmira-sustainable-jeans.jpg?404=fcus/74qay.jpg&width=1024&height=1537",
+        "rating": 3,
+        "discount": 10,
+        "categoryId": "pantalones"
+    },
+    {
+        "id": 3,
+        "title": "Calza Deportiva",
+        "description": "Calza Negra. Confeccionada en material polisap, se ajusta al cuerpo para culaquier tipo de entrenamiento. Combinada en los lateralescon los detalles en transpariencia que la conviertenen un diseño único. ",
+        "price" : 1500,
+        "pictureUrl": "https://img.ltwebstatic.com/images2_pi/2018/10/24/15403720024212546697.webp",
+        "rating": 2,
+        "discount": 6,
+        "categoryId": "calzas"
+    }
+]
