@@ -33,8 +33,12 @@
     color: #ffffff;
     border-bottom: 3px solid transparent;
 }
+.navBar .categories .category-link-active {
+    /* border-bottom: 3px solid red; */
+    color: #ffe881;
+}
 .navBar .categories .category-link:hover {
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid #ffe881;
 }
 .navBar .category {
     margin: 0 4px;

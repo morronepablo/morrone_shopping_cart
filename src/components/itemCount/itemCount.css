@@ -1,0 +1,37 @@
+.item__count {
+    display: flex;
+}
+.item__count-btn1, .item__count-btn2 {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.item__count-btn1 {
+    /* font-size: 30px; */
+    color: yellow;
+    background-color: rgb(252, 0, 0);
+    border: none;
+    border-radius: 5px;
+}
+.item__count-btn2 {
+    color: yellow;  
+    background-color: #006dfc;
+    border: none;
+    border-radius: 5px;
+}
+.item__count-display {
+    font-size: 22px;
+    height: 30px;
+    width: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.item__count-display-stock {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+    color:darkkhaki;
+}
+.item__count-display-stock span {
+    color:mediumturquoise;
+}

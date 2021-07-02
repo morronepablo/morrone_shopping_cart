@@ -14,7 +14,7 @@ export const NavBar = () => {
             </Link>
             <ul className='categories'>
                 {categories.map((category, index) => (
-                            <NavLink className='category-link' to={`/category/${category.toLowerCase()}`}>
+                            <NavLink activeClassName='category-link-active' className='category-link' to={`/category/${category.toLowerCase()}`}>
                                 <li key={index} className='category'>{category}</li>
                             </NavLink>
                 ))}
