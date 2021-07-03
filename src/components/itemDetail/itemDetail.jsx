@@ -1,10 +1,20 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { ItemCount } from '../itemCount/itemCount'
 import './itemDetail.css'
 
 export const ItemDetail = ({ item }) => {
 
+    // Formato numeros a Moneda Local
+    function formatNumber(number) {
+        return new Intl.NumberFormat( "ES-AR", {
+            style: 'currency',
+            currency: 'ARS',
+        }).format(number)
+    }
+    //----------------------------------------------
+
     // Estock Aleatorio para productos (hasta que venga de la BD)
+
     var min = 1;
     var max = 20;
     var Rand =  min + (Math.random() * (max-min));
@@ -24,7 +34,9 @@ export const ItemDetail = ({ item }) => {
 
         <div className='detail'>
             <div className='detail__image'> 
-                {item !== undefined ? <img src={item.pictureUrl} alt="" /> : <p>{''}</p>}
+                <div className='detal__image-tamano'>
+                    {item !== undefined ? <img src={item.pictureUrl} alt="" /> : <p>{''}</p>}
+                </div>
             </div>
             <div className='detail__info'>
                 <div className='detail__info-title'>
@@ -38,10 +50,10 @@ export const ItemDetail = ({ item }) => {
                 </div>
                 <div className='detail__info__buy'>
                     <div className='detail__info__buy-price'>
-                        {item !== undefined ? <p>Precio de venta al publico: $ {item.price.toFixed(2)}</p> : <p>{''}</p>}
+                        {item !== undefined ? <p>Precio de venta al publico:  {formatNumber((item.price.toFixed(2)))}</p> : <p>{''}</p>}
                         <div className="detail__info__buy-price-actions">
                             {item !== undefined ? <p>-{item.discount}%</p> : <p>{''}</p>}
-                            {item !== undefined ? <p> $ {(item.price - Math.floor(item.price * item.discount) / 100).toFixed(2)}</p> : <p>{''}</p>} 
+                            {item !== undefined ? <p> {formatNumber((item.price - Math.floor(item.price * item.discount) / 100).toFixed(2))}</p> : <p>{''}</p>} 
                         </div>
                         <div id="contadorProducto" className="detail__info__itemcount">
                             <ItemCount stock={stock} initial={1} onAdd={() => console.log('onAdd')}  />

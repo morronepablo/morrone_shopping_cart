@@ -1,30 +1,36 @@
 .detail {
     display: flex;
     flex-direction: row;
-    width: 1345px;
-    height: 575px;
+    height: 380px;
+    margin-top: 10px;
     background-color: #eee;
     padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .detail__image {
     color: #fff;
     margin: 10px;
     width: 250px;
-    height: 350px;
     text-align: center;
 }
 .detail__image img {
-    width: 100%;
+    /* width: 100%; */
+    width: auto;
+    height: auto;
+    max-width: 255px;
+    max-height: 350px;
     border: 1px solid #c4c2c2;
     border-radius: 10px;
 }
-
+.datail__image-tamano {
+    width: 10px;
+}
 .detail__info {
     color: #fff;
     margin: 10px 20px 0;
     width: 1050px;
-    height: 350px;
-    /* background: #E67E22; */
+    height: 300px;
     text-align: center;
 }
 .detail__info-title {
@@ -55,7 +61,6 @@
     margin-top: 0;
     margin-bottom: 0;
 }
-
 .detail__info__buy {
     display: flex;
     align-items: center;
@@ -118,11 +123,6 @@
     background-color: #ff5400;
     content: "";
 }
-
-
-
-
-
 .detail__info__buy-btn2 {
     display: none;
     position: relative;
@@ -151,9 +151,6 @@
     background-color: #ff5400;
     content: "";
 }
-
-
-
 .detail__info__itemcount {
     display: flex;
     margin-top: 10px;

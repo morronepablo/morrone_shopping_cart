@@ -29,12 +29,5 @@ export const Item = ({item}) => {
                 <div>Detalle Producto</div>
             </Link>
         </div>
-        // <Link className='product-container' to={`/item/${id}`}>
-        //     <article id={id}>
-        //         <h2>{title}</h2>
-        //         <img src={pictureUrl} alt="Product" />
-        //         <p>{price}</p>
-        //     </article>
-        // </Link>
     )
 }

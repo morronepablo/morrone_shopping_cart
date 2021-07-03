@@ -2,13 +2,18 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavBar } from "./components/navBar/navBar";
 import { ItemListContainer } from "./pages/itemListContainer/itemListContainer";
 import { ItemDetailContainer } from "./pages/itemDetailContainer/itemDetailContainer";
-
+import { SlideShow } from './components/slideShow/slideShow'
+import './App.css'
+import styled from 'styled-components'
 
 export const App = () => {
     return (
       <Router>
         <main>
           <NavBar />
+            <article>
+              <SlideShow />
+            </article>
           <Switch>
             <Route exact path="/">
               <ItemListContainer />

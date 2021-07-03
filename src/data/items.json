@@ -28,5 +28,45 @@
         "rating": 2,
         "discount": 6,
         "categoryId": "calzas"
+    },
+    {
+        "id": 4,
+        "title": "Campera Chelsea Market    ",
+        "description": "Campera de Nylon Reversible rellena de poliester. Gift de regalo, estuche transformable en Almohada de viaje",
+        "price" : 14690,
+        "pictureUrl": "https://static.dafiti.com.ar/p/chelsea-market-0804-665684-1-zoom.jpg",
+        "rating": 5,
+        "discount": 10,
+        "categoryId": "camperas"
+    },
+    {
+        "id": 5,
+        "title": "Campera Montagne",
+        "description": "Campera deportiva forrada en polartek con capucha. Posee un bolsillo fronto-superior con cierre vertical tipo termosellado y 2 bolsillos fronto-inferiores con cierre tipo termosellado.",
+        "price" : 7537,
+        "pictureUrl": "https://static.dafiti.com.ar/p/montagne-3765-007816-1-zoom.jpg",
+        "rating": 4,
+        "discount": 7,
+        "categoryId": "camperas"
+    },
+    {
+        "id": 6,
+        "title": "Pantalon Stefani",
+        "description": "Pantalon tipo cargo straight de gabardina con spandex",
+        "price" : 6190,
+        "pictureUrl": "https://static.dafiti.com.ar/p/stefani-1710-279293-1-zoom.jpg",
+        "rating": 5,
+        "discount": 20,
+        "categoryId": "pantalones"
+    },
+    {
+        "id": 7,
+        "title": "Pantalon Prussia",
+        "description": "Pantalon de PU simil cuero tipo babucha con cintura elastizada y puños. Tiro medio. Confort Fit",
+        "price" : 5590,
+        "pictureUrl": "https://static.dafiti.com.ar/p/prussia-7833-531664-1-zoom.jpg",
+        "rating": 3,
+        "discount": 3,
+        "categoryId": "pantalones"
     }
 ]
