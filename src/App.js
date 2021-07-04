@@ -3,6 +3,7 @@ import { NavBar } from "./components/navBar/navBar";
 import { ItemListContainer } from "./pages/itemListContainer/itemListContainer";
 import { ItemDetailContainer } from "./pages/itemDetailContainer/itemDetailContainer";
 import { SlideShow } from './components/slideShow/slideShow'
+import { NotFound } from './pages/notFound/notFound'
 import './App.css'
 import styled from 'styled-components'
 
@@ -18,11 +19,15 @@ export const App = () => {
             <Route exact path="/">
               <ItemListContainer />
             </Route>
-            <Route exact path="/category/:id">
+            <Route path="/category/:id">
               <ItemListContainer />
             </Route>
-            <Route exact path="/item/:id">
+            
+            <Route path="/item/:id">
               <ItemDetailContainer />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </main>

@@ -23,6 +23,8 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
                 <button disabled={!stock} className="item__count-btn2" onClick={() => handleCount('+')}><i class="fas fa-plus"></i></button>
                 <p className="item__count-display-stock">Stock disponible : <span>{stock}</span></p>
             </div>
+
+            {/* <button disabled={!stock} id="alCarrito" className="detail__info__buy-btn" onClick={onAdd}><i class="fas fa-cart-plus"></i> Al Carrito</button> */}
             
             {/* <button disabled={!stock} onClick={onAdd}>Agregar al carrito</button> */}
         </div>
