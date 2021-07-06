@@ -98,6 +98,7 @@
 }
 .detail__info__buy-btn {
     position: relative;
+    margin-top: 20px;
     width: 200px;
     cursor: pointer;
     border: none;
@@ -124,7 +125,6 @@
     content: "";
 }
 .detail__info__buy-btn2 {
-    display: none;
     position: relative;
     width: 200px;
     cursor: pointer;

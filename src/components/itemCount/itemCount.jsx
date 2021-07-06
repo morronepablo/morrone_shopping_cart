@@ -1,7 +1,9 @@
 import { useState } from "react"
 import './itemCount.css'
-export const ItemCount = ({ initial, stock, onAdd }) => {
+export const ItemCount = ({ initial, stock, onAdd=()=>{} }) => {
     const [count, setCount] = useState(initial)
+
+    //const setProduct = useContext(CartContext)
 
     const handleCount = (operator) => {
         if(operator === '+') {
@@ -24,13 +26,7 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
                 <p className="item__count-display-stock">Stock disponible : <span>{stock}</span></p>
             </div>
 
-            {/* <button disabled={!stock} id="alCarrito" className="detail__info__buy-btn" onClick={onAdd}><i class="fas fa-cart-plus"></i> Al Carrito</button> */}
-            
-            {/* <button disabled={!stock} onClick={onAdd}>Agregar al carrito</button> */}
+            <button className="detail__info__buy-btn" disabled={!stock} onClick={() => onAdd(count)}><i class="fas fa-cart-plus"></i> Al Carrito</button>
         </div>
     )
 }
-
-//disabled={stock ? false : true}
-//disabled={stock === 0}
-//disabled={!stock}

@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { ItemCount } from '../itemCount/itemCount'
+import { useHistory } from 'react-router-dom'
+import { useContext } from 'react'
+import { CartContext } from '../../context/cartContext'
 import './itemDetail.css'
 
-export const ItemDetail = ({ item, count }) => {
+export const ItemDetail = ({ item }) => {
 
     // Formato numeros a Moneda Local
     function formatNumber(number) {
@@ -20,16 +23,21 @@ export const ItemDetail = ({ item, count }) => {
     var Rand =  min + (Math.random() * (max-min));
     const stockInicial = Math.round(Rand)
     const [stock, setStock] = useState(stockInicial)
+    const [count, setCount] = useState(0)
+    const history = useHistory()
+    const setProduct = useContext(CartContext)
 
     // ---------------------------------------------------------
-    
-    const handleCarrito = () => {
-        console.log("ir al carrito")
-        document.getElementById('alCarrito').style.display='none'
-        document.getElementById('irCarrito').style.display='block'
-        document.getElementById('contadorProducto').style.display='none'
+
+    const onAdd = (quantity) => {
+        setCount(quantity)
+        setProduct(quantity)
     }
 
+    const finishPurchase = () => {
+        history.push("/cart")
+    }
+    
     return (
 
         <div className='detail'>
@@ -55,12 +63,13 @@ export const ItemDetail = ({ item, count }) => {
                             {item !== undefined ? <p>-{item.discount}%</p> : <p>{''}</p>}
                             {item !== undefined ? <p> {formatNumber((item.price - Math.floor(item.price * item.discount) / 100).toFixed(2))}</p> : <p>{''}</p>} 
                         </div>
-                        <div id="contadorProducto" className="detail__info__itemcount">
-                            <ItemCount stock={stock} initial={1} onAdd={count}  />
-                        </div>
                     </div>
-                    <button disabled={!stock} id="alCarrito" className="detail__info__buy-btn" onClick={handleCarrito}><i class="fas fa-cart-plus"></i> Al Carrito</button>
-                    <button id="irCarrito" className="detail__info__buy-btn2"><i class="fab fa-opencart"></i> Ir al Carrito</button>
+                        <div id="contadorProducto" className="detail__info__itemcount">
+                            {!count && <ItemCount stock={stock} initial={1} onAdd={onAdd}></ItemCount>}
+                            {!!count && <button className="detail__info__buy-btn2" onClick={finishPurchase}><i class="fab fa-opencart"></i> Ir al Carrito</button>}
+                        </div>
+                    {/* <button disabled={!stock} id="alCarrito" className="detail__info__buy-btn" onClick={() => handleCarrito(count)}><i class="fas fa-cart-plus"></i> Al Carrito</button>
+                    <button id="irCarrito" className="detail__info__buy-btn2"><i class="fab fa-opencart"></i> Ir al Carrito</button> */}
                 </div>
                 <div>
                 </div>
