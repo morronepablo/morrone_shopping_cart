@@ -64,12 +64,10 @@ export const ItemDetail = ({ item }) => {
                             {item !== undefined ? <p> {formatNumber((item.price - Math.floor(item.price * item.discount) / 100).toFixed(2))}</p> : <p>{''}</p>} 
                         </div>
                     </div>
-                        <div id="contadorProducto" className="detail__info__itemcount">
-                            {!count && <ItemCount stock={stock} initial={1} onAdd={onAdd}></ItemCount>}
-                            {!!count && <button className="detail__info__buy-btn2" onClick={finishPurchase}><i class="fab fa-opencart"></i> Ir al Carrito</button>}
-                        </div>
-                </div>
-                <div>
+                    <div id="contadorProducto" className="detail__info__itemcount">
+                        {!count && <ItemCount stock={stock} initial={1} onAdd={onAdd}></ItemCount>}
+                        {!!count && <button className="detail__info__buy-btn2" onClick={finishPurchase}><i class="fab fa-opencart"></i> Ir al Carrito</button>}
+                    </div>
                 </div>
             </div>
         </div>
