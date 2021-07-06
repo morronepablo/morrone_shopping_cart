@@ -68,8 +68,6 @@ export const ItemDetail = ({ item }) => {
                             {!count && <ItemCount stock={stock} initial={1} onAdd={onAdd}></ItemCount>}
                             {!!count && <button className="detail__info__buy-btn2" onClick={finishPurchase}><i class="fab fa-opencart"></i> Ir al Carrito</button>}
                         </div>
-                    {/* <button disabled={!stock} id="alCarrito" className="detail__info__buy-btn" onClick={() => handleCarrito(count)}><i class="fas fa-cart-plus"></i> Al Carrito</button>
-                    <button id="irCarrito" className="detail__info__buy-btn2"><i class="fab fa-opencart"></i> Ir al Carrito</button> */}
                 </div>
                 <div>
                 </div>
