@@ -125,6 +125,7 @@
     content: "";
 }
 .detail__info__buy-btn2 {
+    display: none;
     position: relative;
     width: 200px;
     cursor: pointer;

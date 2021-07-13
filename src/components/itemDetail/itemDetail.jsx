@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { ItemCount } from '../itemCount/itemCount'
-import { useHistory } from 'react-router-dom'
 import { useContext } from 'react'
 import { CartContext } from '../../context/cartContext'
 import './itemDetail.css'
@@ -24,18 +23,21 @@ export const ItemDetail = ({ item }) => {
     const stockInicial = Math.round(Rand)
     const [stock, setStock] = useState(stockInicial)
     const [count, setCount] = useState(0)
-    const history = useHistory()
-    const setProduct = useContext(CartContext)
+    
 
     // ---------------------------------------------------------
 
-    const onAdd = (quantity) => {
-        setCount(quantity)
-        setProduct(quantity)
+    const { addItems } = useContext(CartContext)
+
+
+    const onAdd = (cantidad) => {
+        document.getElementById('irCarrito').style.display='block'
+        setCount(cantidad)
+        addItems(item, cantidad)
     }
 
-    const finishPurchase = () => {
-        history.push("/cart")
+    const irAlCarrito = () => {
+        window.location = '/cart';
     }
     
     return (
@@ -66,7 +68,8 @@ export const ItemDetail = ({ item }) => {
                     </div>
                     <div id="contadorProducto" className="detail__info__itemcount">
                         {!count && <ItemCount stock={stock} initial={1} onAdd={onAdd}></ItemCount>}
-                        {!!count && <button className="detail__info__buy-btn2" onClick={finishPurchase}><i class="fab fa-opencart"></i> Ir al Carrito</button>}
+                        <button id="irCarrito" className="detail__info__buy-btn2" onClick={irAlCarrito  }><i class="fab fa-opencart"></i> Ir al Carrito</button>
+                        {/* {!!count && <button className="detail__info__buy-btn2" onClick={finishPurchase}><i class="fab fa-opencart"></i> Ir al Carrito</button>} */}
                     </div>
                 </div>
             </div>
