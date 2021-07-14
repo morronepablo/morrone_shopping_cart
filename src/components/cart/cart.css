@@ -1,0 +1,20 @@
+.cart {
+    background-color: rgb(231, 231, 231);
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.cart .title {
+    width: max-content;
+	background-color: black;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px 5px 0 0;
+}
+.cart .data {
+    background-color: #fff;
+	box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+	padding: 15px;
+}

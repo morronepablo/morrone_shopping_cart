@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ItemCount } from '../itemCount/itemCount'
 import { useContext } from 'react'
 import { CartContext } from '../../context/cartContext'
@@ -36,9 +37,9 @@ export const ItemDetail = ({ item }) => {
         addItems(item, cantidad)
     }
 
-    const irAlCarrito = () => {
-        window.location = '/cart';
-    }
+    // const irAlCarrito = () => {
+    //     window.location = '/cart';
+    // }
     
     return (
 
@@ -68,7 +69,9 @@ export const ItemDetail = ({ item }) => {
                     </div>
                     <div id="contadorProducto" className="detail__info__itemcount">
                         {!count && <ItemCount stock={stock} initial={1} onAdd={onAdd}></ItemCount>}
-                        <button id="irCarrito" className="detail__info__buy-btn2" onClick={irAlCarrito  }><i class="fab fa-opencart"></i> Ir al Carrito</button>
+                        <Link className='detail__info__buy-btn3' to='/cart'>
+                            <button id="irCarrito" className="detail__info__buy-btn2" ><i class="fab fa-opencart"></i> Ir al Carrito</button>
+                        </Link>
                         {/* {!!count && <button className="detail__info__buy-btn2" onClick={finishPurchase}><i class="fab fa-opencart"></i> Ir al Carrito</button>} */}
                     </div>
                 </div>

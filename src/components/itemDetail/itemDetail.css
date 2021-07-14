@@ -152,6 +152,9 @@
     background-color: #ff5400;
     content: "";
 }
+.detail__info__buy-btn3 {
+    text-decoration: none;
+}
 .detail__info__itemcount {
     display: flex;
     margin-top: 10px;

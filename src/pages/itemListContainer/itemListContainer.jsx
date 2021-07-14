@@ -16,10 +16,15 @@ export const ItemListContainer = () => {
         const items = getItems()
         setItems(items)
     }, [id])
-  
+    const category = (ITEMS.filter((item) => item.categoryId === id));
+
+    if(category.length === 0){
+        const id = undefined;
+    }
     return (
         <section>
-            {id !== undefined ? <p className='category__title'>{id.toUpperCase().charAt(0)}{id.slice(1)}</p> : <p className='category__title'>{'Todas las Categorias'}</p>}
+            {category.length === 0 ? <h1>{category}</h1> : id !== undefined ? <p className='category__title'>{id.toUpperCase().charAt(0)}{id.slice(1)}</p> : <p className='category__title'>{'Todas las Categorias'}</p>}
+            {/* {id !== undefined ? <p className='category__title'>{id.toUpperCase().charAt(0)}{id.slice(1)}</p> : <p className='category__title'>{'Todas las Categorias'}</p>} */}
             <ItemList items={items} />
         </section>
     )
