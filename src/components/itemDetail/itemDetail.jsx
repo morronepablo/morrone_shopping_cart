@@ -37,10 +37,6 @@ export const ItemDetail = ({ item }) => {
         addItems(item, cantidad)
     }
 
-    // const irAlCarrito = () => {
-    //     window.location = '/cart';
-    // }
-    
     return (
 
         <div className='detail'>
@@ -72,7 +68,6 @@ export const ItemDetail = ({ item }) => {
                         <Link className='detail__info__buy-btn3' to='/cart'>
                             <button id="irCarrito" className="detail__info__buy-btn2" ><i class="fab fa-opencart"></i> Ir al Carrito</button>
                         </Link>
-                        {/* {!!count && <button className="detail__info__buy-btn2" onClick={finishPurchase}><i class="fab fa-opencart"></i> Ir al Carrito</button>} */}
                     </div>
                 </div>
             </div>
