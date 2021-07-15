@@ -16,7 +16,8 @@ export const CartWidget = () => {
                 <span className="nav-icon">
                     <i className="fas fa-cart-plus"></i>
                 </span>
-                <div className="cart-items">{cantCart}</div>
+                {cantCart !== 0 ? <div className="cart-items">{cantCart}</div> : <p>{''}</p>}
+                {/* <div className="cart-items">{cantCart}</div> */}
             </div>
         </Link>
     )
