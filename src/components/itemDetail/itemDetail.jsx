@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { CartContext } from '../../context/cartContext'
 import './itemDetail.css'
 
-export const ItemDetail = ({ item }) => {
+export const ItemDetail = ({ item, stock }) => {
 
     // Formato numeros a Moneda Local
     function formatNumber(number) {
@@ -14,6 +14,8 @@ export const ItemDetail = ({ item }) => {
             currency: 'ARS',
         }).format(number)
     }
+
+    console.log("item del itemDetail ", item);
     //----------------------------------------------
 
     // Estock Aleatorio para productos (hasta que venga de la BD)
@@ -22,14 +24,15 @@ export const ItemDetail = ({ item }) => {
     var max = 20;
     var Rand =  min + (Math.random() * (max-min));
     const stockInicial = Math.round(Rand)
-    const [stock, setStock] = useState(stockInicial)
+    //const Stocito = item.stock
+
+    //const [stock, setStock] = useState(stockInicial)
     const [count, setCount] = useState(0)
     
 
     // ---------------------------------------------------------
 
     const { addItems } = useContext(CartContext)
-
 
     const onAdd = (cantidad) => {
         document.getElementById('irCarrito').style.display='block'
@@ -38,7 +41,7 @@ export const ItemDetail = ({ item }) => {
     }
 
     return (
-
+        
         <div className='detail'>
             <div className='detail__image'> 
                 <div className='detal__image-tamano'>

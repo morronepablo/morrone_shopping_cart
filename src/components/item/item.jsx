@@ -4,12 +4,11 @@ import './item.css'
 export const Item = ({item}) => {
     const {id} = item
 
-
     return (
 
         <div className="product">
             <div className="product__info">
-                <p className="product__title">{item.title}</p>
+                <p className="product__title">{item.title.length > 16 ? item.title.substring(16, -1) + '...' : item.title}</p>
                 <p className="product__price">
                     <small>$</small>
                     <strong>{item.price}</strong>
