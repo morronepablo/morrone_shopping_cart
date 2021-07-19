@@ -1,6 +1,7 @@
-import './cart.css'
 import { CartContext } from '../../context/cartContext'
+import { Link } from 'react-router-dom'
 import { Fragment, useContext } from 'react'
+import './cart.css'
 
 export const Cart = () => {
     const {products, removeItem, clear, totalCart} = useContext(CartContext)
@@ -82,7 +83,16 @@ export const Cart = () => {
                                     <button onClick={() => { clear() }}><i class="fas fa-broom"></i> Vaciar carrito</button>
                                 </div>
                                 <div className="acciones__carrito">
-                                    <button><i class="fas fa-store"></i> Procesar compra</button>
+                                    
+                                    <button><i class="fas fa-store"></i>
+                                    
+                                    <Link to="/checkOut" className="acciones__carrito-procesar">
+
+                                     Procesar compra
+                                    </Link>
+                                     
+                                     </button>
+                                    
                                 </div>
                             </div>
                         </div>

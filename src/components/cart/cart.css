@@ -256,8 +256,14 @@
     display: flex;
     justify-content: space-between;
 }
+.acciones .acciones__carrito .acciones__carrito-procesar {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+}
 .acciones .acciones__carrito > button {
     background: #ff5400;
+    text-decoration: none;
     color: #fff;
     border-radius: 5px;
     border: none;

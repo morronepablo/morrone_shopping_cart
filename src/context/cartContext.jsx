@@ -63,6 +63,26 @@ export const CartProvider = ({ children }) => {
         setCantCart(0)
     }
 
+    const getOrder = () => {
+        const items = products.map(
+            ({item}) => ({
+                id: item.id,
+                title: item.title,
+                price: item.price,
+            })
+        )
+
+        return {
+            buyer: {
+                name: 'Morrone Pablo',
+                phone: '+54 911 3866 9097',
+                email: 'morronepablo@gmail.com'
+            },
+            items,
+            totalCart,
+        }
+    }
+
     useEffect(() => {
         // Calculo del total del carrito
         

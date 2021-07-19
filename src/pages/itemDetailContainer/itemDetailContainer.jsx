@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ItemDetail } from '../../components/itemDetail/itemDetail'
+import { NotFound } from '../../pages/notFound/notFound'
 import { Loading } from '../../components/loading/loading'
 import { firebase } from '../../firebase/firebase'
 
@@ -16,8 +17,7 @@ export const ItemDetailContainer = () => {
             const db = firebase.firestore()
             try {
                 const data = await db.collection('items').get()
-                const arrayData = data.docs.map(doc => ({id: doc.id, ...doc.data()}))
-                console.log(arrayData) 
+                const arrayData = data.docs.map(doc => ({id: doc.id, ...doc.data()})) 
                 setProductos(arrayData)   
                 const getItem = () => {
                     return arrayData.filter((item) => item.id === id)
@@ -32,11 +32,10 @@ export const ItemDetailContainer = () => {
         obtenerDatos()
     
     }, [])
-
     return (
         <section>
             {loading && <Loading />}
-            {!loading && <ItemDetail item={item} stock={item.stock} />}
+            {!loading && item !== undefined ? <ItemDetail item={item} stock={item.stock} /> : <NotFound /> }
         </section>
     )
 }

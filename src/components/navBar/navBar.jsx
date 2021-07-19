@@ -28,6 +28,8 @@ export const NavBar = () => {
     
     }, [])
 
+    console.log();
+
     return (
         <header className='navBar'>
             <Link className='logo-link' to='/'>

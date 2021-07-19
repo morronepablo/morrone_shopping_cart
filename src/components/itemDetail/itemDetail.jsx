@@ -15,7 +15,6 @@ export const ItemDetail = ({ item, stock }) => {
         }).format(number)
     }
 
-    console.log("item del itemDetail ", item);
     //----------------------------------------------
 
     // Estock Aleatorio para productos (hasta que venga de la BD)

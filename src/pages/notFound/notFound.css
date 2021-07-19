@@ -1,8 +1,13 @@
 .notfound {
     background-color: rgb(33, 98, 236);
     color: white;
+    height: 500px;
 }
 .notfound__container {
     padding: 20px;
     text-align: center;
+    margin-top: 20px;
+}
+.notfound__container .text-center {
+    margin-top: 60px;
 }

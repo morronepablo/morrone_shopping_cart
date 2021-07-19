@@ -9,7 +9,7 @@ import './itemListContainer.css'
 export const ItemListContainer = () => {
     const { id } = useParams()
     const [ categorias, setCategorias ] = useState([])
-    const [ isCategory, setIsCategory ] = useState(true)
+    const [ isCategory, setIsCategory ] = useState(false)
     const [ productos, setProductos ] = useState([])
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
@@ -45,21 +45,21 @@ export const ItemListContainer = () => {
         obtenerDatos()
     
     }, [id])
-
-
+    console.log("id ", id);
     return (
         <Fragment>
             {loading && <Loading />}
             {id !== undefined ? 
                 <Fragment>
-                    <p className='category__title'>{id.toUpperCase().charAt(0)}{id.slice(1)}</p> 
+                    {isCategory ? <p className='category__title'>{id.toUpperCase().charAt(0)}{id.slice(1)}</p> : <p>{""}</p> }
+                     
                 </Fragment>
                 : 
                 <Fragment>
                     <p className='category__title'>{'Todas las Categorias'}</p>
                 </Fragment>
             } 
-            {!loading && <ItemList key={items.id} items={items} isCategory={isCategory} />}
+            {!loading && <ItemList key={items.id} id={id} items={items} isCategory={isCategory} />}
         </Fragment>
     )
 }

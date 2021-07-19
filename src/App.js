@@ -7,6 +7,8 @@ import { SlideShow } from './components/slideShow/slideShow'
 import { NotFound } from './pages/notFound/notFound'
 import { CartProvider } from './context/cartContext'
 import { Cart } from "./components/cart/cart";
+import { Footer } from "./components/footer/footer";
+import { CheckOut } from "./pages/checkOut/checkOut";
 
 export const App = () => {
     return (
@@ -30,10 +32,14 @@ export const App = () => {
               <Route path="/cart">
                 <Cart />
               </Route>
+              <Route path="/checkOut">
+                <CheckOut />
+              </Route>
               <Route path="*">
                 <NotFound />
               </Route>
             </Switch>
+            <Footer />
           </main>
         </Router>
       </CartProvider>
