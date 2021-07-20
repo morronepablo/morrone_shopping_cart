@@ -16,7 +16,6 @@ export const Cart = () => {
             currency: 'ARS',
         }).format(number)
     }
-    console.log("productos Carrito ", products);
 
     return (
         <Fragment>

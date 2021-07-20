@@ -45,7 +45,6 @@ export const ItemListContainer = () => {
         obtenerDatos()
     
     }, [id])
-    console.log("id ", id);
     return (
         <Fragment>
             {loading && <Loading />}

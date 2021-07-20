@@ -43,7 +43,6 @@ export const CartProvider = ({ children }) => {
                 total += product.quantity
             })
         }
-        console.log("Total: ", total);
         setCantCart(total)
     }
 
@@ -63,26 +62,6 @@ export const CartProvider = ({ children }) => {
         setCantCart(0)
     }
 
-    const getOrder = () => {
-        const items = products.map(
-            ({item}) => ({
-                id: item.id,
-                title: item.title,
-                price: item.price,
-            })
-        )
-
-        return {
-            buyer: {
-                name: 'Morrone Pablo',
-                phone: '+54 911 3866 9097',
-                email: 'morronepablo@gmail.com'
-            },
-            items,
-            totalCart,
-        }
-    }
-
     useEffect(() => {
         // Calculo del total del carrito
         
@@ -92,7 +71,6 @@ export const CartProvider = ({ children }) => {
                 (productoTotalPrecio, currentItemPrecio) => productoTotalPrecio + currentItemPrecio, 0
             )
             setTotalCart(nuevoTotal)
-            console.log("nuevoTotal : ",nuevoTotal);
     }, [products])
 
     return (
