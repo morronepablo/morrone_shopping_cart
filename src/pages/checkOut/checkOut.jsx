@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Loading } from '../../components/loading/loading'
 import { firebase } from '../../firebase/firebase'
 import { CartContext } from '../../context/cartContext'
+import './checkOut.css'
 
 function Field({
     name,
@@ -119,15 +120,22 @@ export const CheckOut = () => {
     return (
       <>
         {loading && <Loading />}
-        <div className="container">
-          <div className="py-5 text-center mt-5">
-            <h2 className="mt-5">¡Gracias por elegirnos!</h2>
-            <h4 className="my-5">La compra se ha realizado exitosamente.</h4>
-            <strong>El ID de tu compra es {orderId}</strong>
-            <p className="danger">Sport Store</p>
-            <Link className="btn btn-outline-primary m-3" to={`/`}>
-              <strong>Ir a comprar</strong>
-            </Link>
+        <div className="checkOut">
+          <div className="title">Su Compra</div>
+          <div className="data">
+            <div className="data__header">
+              <h2 className="data__header-title">¡Gracias por elegirnos!</h2>
+              <h4 className="data__header-title2">La compra se ha realizado exitosamente.</h4>
+              <br />
+              <h3><strong>El ID de tu compra es {orderId}</strong></h3>
+              <br />
+              
+          <p className="data__header-logo">Morrone Shop</p>
+          <br />
+          <Link className="data__header-button" to={`/`}>
+            <strong>Ir a comprar</strong>
+          </Link>
+            </div>
           </div>
         </div>
       </>
@@ -137,22 +145,23 @@ export const CheckOut = () => {
   return (
     <>
       { loading && 
-      <div className="container">
-        <div className="text-center py-5 mt-5">
-          <h4 className="mt-5">
-            Completa el formulario con tus datos para confirmar la compra.
-          </h4>
-        </div>
-        <div className="row">
-          <div className="col-md-12">
+      <div className="formulario">
+        <div className="title">Formulario Compra</div>
+        <div className="dato">
+          <div className="dato__header">
+            <h4 className="dato__header-title">
+              Completa el formulario con tus datos para confirmar la compra.
+            </h4>
+          </div>
+          <div className="dato__row">
             <form>
-              <div className="row g-3">
+              <div className="dato__row-datos">
                 <Field
                   inputLabel="inputName"
                   name="name"
                   nameField="Nombre y Apellido"
                   valueInput={name}
-                  style={{ paddingTop: "5px" }}
+                  style={{ paddingTop: "5px", paddingRight: "10px", fontWeight: '600' }}
                   type="text"
                   id="inputName"
                   placeholder="Nombre y Apellido"
@@ -163,7 +172,7 @@ export const CheckOut = () => {
                   name="phone"
                   nameField="Teléfono"
                   valueInput={phone}
-                  style={{ paddingTop: "10px" }}
+                  style={{ paddingTop: "10px", paddingRight: "10px", fontWeight: '600' }}
                   type="text"
                   id="inputPhone"
                   placeholder="1133445566"
@@ -174,7 +183,7 @@ export const CheckOut = () => {
                   name="email"
                   nameField="Email"
                   valueInput={email}
-                  style={{ paddingTop: "10px" }}
+                  style={{ paddingTop: "10px", paddingRight: "10px", fontWeight: '600' }}
                   type="email"
                   id="inputEmail"
                   placeholder="mail@ejemplo.com"
@@ -185,24 +194,25 @@ export const CheckOut = () => {
                   name="email"
                   nameField="Confirmar Email"
                   valueInput={emailConfirm}
-                  style={{ paddingTop: "10px" }}
+                  style={{ paddingTop: "10px", paddingRight: "10px", fontWeight: '600' }}
                   type="email"
                   id="inputConfirmEmail"
                   placeholder="mail@ejemplo.com"
                   onChange={onEmailConfirmChange}
                 />
               </div>
-              <button
-                className="btn btn-outline-success btn-lg btn-block mt-5"
-                type="submit"
-                disabled={
-                  !name || !phone || !email || emailConfirm !== email || sent
-                }
-                onClick={createOrder}
-                style={{ marginBottom: "30px" }}
-              >
-                <strong>Confirmar</strong>
-              </button>
+                <br />
+                <button
+                  className="btn btn-outline-success btn-lg btn-block mt-5"
+                  type="submit"
+                  disabled={
+                    !name || !phone || !email || emailConfirm !== email || sent
+                  }
+                  onClick={createOrder}
+                  style={{ backgroundColor: '#ff5400', color: 'white', height: '30px', borderRadius: '5px', cursor: 'pointer'}}
+                  >
+                  <strong>Confirmar</strong>
+                </button>
             </form>
           </div>
         </div>

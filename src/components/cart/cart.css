@@ -97,25 +97,18 @@
     text-align: center;
     font-weight: normal;
 }
-
-
-
-
-
 .item__fila {
     display: flex;
     height: 130px;
     border-bottom: 1px solid grey;
     margin-bottom: 10px;
 }
-
 .item__file-img {
     width: 150px;
     height: 150px;
     align-items: center;
     margin-bottom: 0;
 }
-
 .item__fila-img > img {
     align-items: center;
     height: 100px;
@@ -126,7 +119,6 @@
     margin-top: 0;
     margin-bottom: 0;
 }
-
 .item__fila-img > h4 {
     background: #ff5400;
     color: yellow;
@@ -138,13 +130,11 @@
     text-align: center;
     margin-bottom: 0;
 }
-
 .item__fila-descripcion {
     width: 450px;
     height: auto;
     margin-left: 40px;
 }
-
 .item__fila-descripcion > h3 {
     font-size: 14px;
     font-weight: normal;
@@ -157,7 +147,6 @@
     height: 150px;
     padding-left: 40px;
 }
-
 .item__fila-precio > h3 {
     align-items: center;
     text-align: left;
@@ -209,7 +198,6 @@
     font-weight: 700;
     line-height: 100px;
 }
-
 .item__fila-eliminar {
     width: auto;
     align-items: center;
@@ -217,7 +205,6 @@
     height: 60px;
     padding-left: 40px;
 }
-
 .item__fila-eliminar > button {
     background: #ff5400;
     color: #fff;
@@ -276,20 +263,3 @@
     line-height: 40px;
     padding: 0px 20px;
 }
-
-
-
-
-
-/* .cart .data .item__fila > ul > li {
-    display: flex;
-    list-style-type: none;   
-}
-.cart .data .item__fila > ul > li > img {
-    height: 100px;
-    width: 100px;
-    align-items: center;    
-    object-fit: contain;
-    margin-top: 15px;
-    margin-bottom: 15px;
-} */

@@ -1,0 +1,85 @@
+.formulario {
+    background-color: rgb(231, 231, 231);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+.formulario .title {
+    width: max-content;
+	background-color: black;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px 5px 0 0;
+}
+.formulario .dato {
+    background-color: #fff;
+	box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+	padding: 15px;
+    height: 240px;
+    margin-bottom: 10px;
+}
+.formulario .dato .dato__row {
+    margin-bottom: 20px;
+}
+.checkOut {
+    background-color: rgb(231, 231, 231);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+.checkOut .title {
+    width: max-content;
+	background-color: black;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px 5px 0 0;
+}
+.checkOut .data {
+    background-color: #fff;
+	box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+	padding: 15px;
+    height: 300px;
+}
+.checkOut .data .data__header {
+    /* display: flex; */
+    height: 30px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.checkOut .data .data__header >h2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color : rgb(0, 58, 24);
+}
+.checkOut .data .data__header >h4 {
+    width: 100%;
+    text-align: center;
+    color : rgb(1, 0, 58);
+}
+h3 {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+.checkOut .data .data__header-logo {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: red;
+}
+.checkOut .data .data__header-button {
+    text-decoration: none;
+    align-items: center;
+    color: #ff5400;
+}
