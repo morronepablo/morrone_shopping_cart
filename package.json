@@ -23,6 +23,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "http://morronepablo.com.ar",
   "browserslist": {
     "production": [
       ">0.2%",
